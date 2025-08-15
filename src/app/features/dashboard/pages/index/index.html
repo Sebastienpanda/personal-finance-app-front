@@ -1,0 +1,14 @@
+<main class="container">
+    <header class="mt-6 mb-8">
+        <h1 class="text-3xl text-grey-900 font-bold">Overview</h1>
+    </header>
+    <app-balance
+        [currentBalance]="transactionsService.currentBalance()"
+        [positiveAmounts]="transactionsService.positiveAmounts()"
+        [negativeAmounts]="transactionsService.negativeAmounts()">
+    </app-balance>
+    <section class="bg-white p-6 rounded-xl mt-8 xl:w-[648px]">
+        <app-header-section title="Pots" href="/pots"/>
+        <app-pots [totalSaved]="potsService.totalSaved()" [lastFourPots]="potsService.lastFourPots()"/>
+    </section>
+</main>
